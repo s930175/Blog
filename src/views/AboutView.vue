@@ -1,5 +1,24 @@
 <template>
-  <div class="about">
-    <h1>This is an about page</h1>
-  </div>
+  <LineViewVue></LineViewVue>
+  <!-- <AppleViewVue></AppleViewVue> -->
+  <div></div>
 </template>
+
+
+
+<script>
+import LineViewVue from "@/components/LineView.vue";
+import AppleViewVue from "@/components/AppleView.vue";
+export default{
+  components:{
+    LineViewVue,
+    AppleViewVue
+  }
+}
+
+</script>
+
+<style>
+
+
+</style>
