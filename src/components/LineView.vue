@@ -20,7 +20,7 @@ const img = function (n) {
   // console.log(n) 
   // total為5，n in total；n就是1~5
   return {
-    backgroundImage: `url(https://picsum.photos/1200/500?random=${n})`,
+    backgroundImage: `url(https://picsum.photos/900/500?random=${n})`,
     animationDuration: `${animationDuration}s`,
     //第二張圖Delay 5s
     // animationDelay: `${((n - 1) * animationDuration) / 2}s`,

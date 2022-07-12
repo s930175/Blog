@@ -1,20 +1,20 @@
 <template>
   <i class="fa-solid fa-burger" @click="showMenu"></i>
   <div :class="show == true ? 'container' : 'show'">
-    <div class="menu">
-      <div class="menu_gameLogo">標題未定
-        <img src="" alt="">
-      </div>
+    <nav class="menu">
       <div class="manu_container">
         <ul>
-          <li><i class="fa-solid fa-angle-right"></i>故事</li>
-          <li><i class="fa-solid fa-angle-right"></i>冒險指南</li>
-          <li><i class="fa-solid fa-angle-right"></i>登場人物</li>
-          <li><i class="fa-solid fa-angle-right"></i>霞精靈介紹</li>
-          <li><i class="fa-solid fa-angle-right"></i>最新資訊</li>
-          <li><i class="fa-solid fa-angle-right"></i>商品介紹</li>
+          <li><i class="fa-solid fa-angle-right"></i>首頁</li>
+          <li><i class="fa-solid fa-angle-right"></i>履歷</li>
+          <li><i class="fa-solid fa-angle-right"></i>學習筆記</li>
+          <li><i class="fa-solid fa-angle-right"></i>作品集</li>
+          <li><i class="fa-solid fa-angle-right"></i>雜談</li>
+          <li><i class="fa-solid fa-angle-right"></i>留言給我</li>
         </ul>
       </div>
+    </nav>
+    <div class="menu-header">
+      123
     </div>
   </div>
 </template>
@@ -43,25 +43,27 @@ export default {
   list-style: none;
   box-sizing: border-box;
 }
-.show {
-  display: none;
-}
 .fa-burger {
   font-size: 2.3rem;
   transform: rotate(-1.5deg);
   z-index: 999;
   padding: 10px;
+  position: fixed;
+  cursor: grab;
 }
+.show {
+  display: none;
+}
+
 .container {
   position: relative;
-  margin: auto;
-  width: 98vw;
-  height: 35vh;
+  width: 25vw;
+  height: 98vh;
   .menu {
-    position: absolute;
+    position: fixed;
     bottom: 60px;
     padding: 6px;
-    width: 97%;
+    width: 15%;
     height: 85%;
     display: flex;
     justify-content: space-around;
@@ -69,38 +71,31 @@ export default {
     border-width: 2px 3px 2px 5px;
     border-radius: 90% 6% 93% 5% / 5% 94% 7% 95%;
     /* 做出傾斜的視覺感 */
-    transform: rotate(1.5deg);
+    transform: rotate(0.5deg);
     border-style: solid;
-
-    .menu_gameLogo {
-      width: 50%;
-      height: 80%;
-        // background-color: rgb(84, 152, 212);
-      margin-right: 10px;
-      transform: rotate(-1.5deg);
-      font-family: "Ma Shan Zheng", cursive;
-      font-size: 1.5rem;
-      font-weight: bold;
-      text-align: center;
-      img{
-        max-width: 100%;
-        max-height: 100%;
-      }
-    }
     .manu_container {
-      margin-top: 40px;
-      width: 50%;
+      width: 96%;
       height: 90%;
-      transform: rotate(-1.5deg);
+      transform: rotate(-0.5deg);
       .fa-angle-right {
         padding-right: 5px;
       }
       li {
         font-family: "Ma Shan Zheng", cursive;
-        font-size: 1.3rem;
+        font-size: 1.4rem;
         font-weight: 500;
+        cursor: pointer;
       }
     }
+  }
+  .menu-header{
+    position: fixed;
+    width: 80vw;
+    height: 85vh;
+    background-color: antiquewhite;
+    top: 5%;
+    left: 16%;
+    z-index: -2;
   }
 }
 </style>

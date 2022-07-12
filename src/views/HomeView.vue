@@ -1,6 +1,8 @@
 <template>
-  <LineViewVue></LineViewVue>
   <NavbarViewVue></NavbarViewVue>
+  <div class="LineViewVue">
+    <LineViewVue></LineViewVue>
+  </div>
   <FooterViewVue></FooterViewVue>
 </template>
 
@@ -19,5 +21,16 @@ export default {
 };
 </script>
 
-<style>
+<style lang="less" scoped>
+*{
+  margin: 0;
+  padding: 0;
+}
+.LineViewVue{
+  position: absolute;
+  top: 2.5%;
+  right: 2.5%;
+  z-index: -1;
+  // opacity: .3;
+}
 </style>
