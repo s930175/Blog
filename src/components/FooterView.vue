@@ -1,7 +1,7 @@
 <template>
     <footer>
         <div class="footer">
-            標題未定 &copy; 絕讚徵人中 
+             &copy; 
         </div>
     </footer>
 </template>
