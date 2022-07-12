@@ -1,6 +1,6 @@
 <template>
   <LineViewVue></LineViewVue>
-  <!-- <AppleViewVue></AppleViewVue> -->
+  <AppleViewVue></AppleViewVue>
   <div></div>
 </template>
 

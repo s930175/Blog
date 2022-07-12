@@ -3,7 +3,7 @@
   <div :class="show == true ? 'container' : 'show'">
     <div class="menu">
       <div class="menu_gameLogo">標題未定
-        <img src="../img/吉祥物02.png" alt="">
+        <img src="" alt="">
       </div>
       <div class="manu_container">
         <ul>
