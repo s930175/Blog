@@ -1,5 +1,12 @@
 <template>
   <i class="fa-solid fa-burger" @click="showMenu"></i>
+  <div class="lightBtn" :style="light ? 'display:none' : ''">
+    <i class="fa-solid fa-toggle-off" @click="light = true"></i>
+  </div>
+  <div class="lightBtn" :style="light ? '' : 'display:none'">
+    <i class="fa-solid fa-toggle-on" @click="light = false"></i>
+  </div>
+
   <div :class="show == true ? 'container' : 'show'">
     <nav class="menu">
       <div class="manu_container">
@@ -13,27 +20,17 @@
         </ul>
       </div>
     </nav>
-    <div class="menu-header">
-      123
-    </div>
+    <div class="menu-header">123</div>
   </div>
 </template>
 
-<script>
+<script setup>
 import { ref, reactive } from "vue";
-export default {
-  setup() {
-    let show = ref(false);
-
-    function showMenu() {
-      show.value = !show.value;
-    }
-    return {
-      show,
-      showMenu,
-    };
-  },
-};
+let show = ref(false);
+let light = ref(false);
+function showMenu() {
+  show.value = !show.value;
+}
 </script>
 
 <style scoped lang="less">
@@ -50,6 +47,11 @@ export default {
   padding: 10px;
   position: fixed;
   cursor: grab;
+}
+.lightBtn{
+  text-align: end;
+  cursor: pointer;
+  font-size: 2.5rem;
 }
 .show {
   display: none;
@@ -88,7 +90,7 @@ export default {
       }
     }
   }
-  .menu-header{
+  .menu-header {
     position: fixed;
     width: 80vw;
     height: 85vh;
