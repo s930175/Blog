@@ -1,9 +1,10 @@
 <template>
-  <NavbarViewVue></NavbarViewVue>
+<NavbarViewVue></NavbarViewVue>
   <div class="LineViewVue">
     <LineViewVue></LineViewVue>
   </div>
   <FooterViewVue></FooterViewVue>
+
 </template>
 
 <script>

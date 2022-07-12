@@ -20,7 +20,14 @@
         </ul>
       </div>
     </nav>
-    <div class="menu-header">123</div>
+    <div
+      class="menu-header"
+      :style="
+        light
+          ? 'background-color:	#FFDEAD;transition: .5s;'
+          : 'background-color: #FDF5E6;transition: .5s;'
+      "
+    ></div>
   </div>
 </template>
 
@@ -42,13 +49,14 @@ function showMenu() {
 }
 .fa-burger {
   font-size: 2.3rem;
-  transform: rotate(-1.5deg);
   z-index: 999;
   padding: 10px;
   position: fixed;
   cursor: grab;
 }
-.lightBtn{
+.lightBtn {
+  position: fixed;
+  right: 1%;
   text-align: end;
   cursor: pointer;
   font-size: 2.5rem;
@@ -98,6 +106,29 @@ function showMenu() {
     top: 5%;
     left: 16%;
     z-index: -2;
+  }
+}
+@media screen and (max-width: 678px) {
+  .container {
+    .menu {
+      position: absolute;
+      top: 5%;
+      left: 0;
+      width: 380%;
+      height: 20%;
+      li {
+        width: 150px;
+        display: inline-block;
+      }
+    }
+    .menu-header {
+      width: 95vw;
+      height: 45vh;
+      background-color: antiquewhite;
+      top: 25%;
+      left: 3%;
+      z-index: -2;
+    }
   }
 }
 </style>

@@ -6,12 +6,10 @@
     </footer>
 </template>
 
-<script>
-export default {
-    setup() {
-        
-    },
-}
+<script setup>
+    import { ref, reactive } from 'vue'
+    let Date = new Date()
+    console.log(Date)
 </script>
 
 <style lang="less" scoped>
